@@ -1,0 +1,56 @@
+#displayBox{
+   border-radius:3px;
+  position:relative;
+  margin:8% auto auto auto;
+  width:450px;
+  padding:40px 50px;
+  display:table;
+  background-color:#000000;
+	color:#f2f2f2;
+
+}
+
+body{
+  background-color:#66c2ff;
+}
+#weatherIcon
+{
+  width:50%;
+  background-color:#99ccff;
+  margin-top:0px;
+  margin-right:50px;
+  margin-bottom:0px;
+  margin-left:50px;
+}
+#title
+{
+  text-align:center;
+}
+#weather{
+  text-align:center;
+}
+#location
+{
+  text-align:center;
+}
+#buttonTrio{
+  margin-top:0px;
+  margin-right:50px;
+  margin-bottom:0px;
+  margin-left:50px;
+}
+#inKelvin
+{
+  background-color:#000000;
+  color:#e60000;
+}
+#inCelsius
+{
+  background-color:#000000;
+  color:#e60000;
+}
+#inFahrenheit
+{
+  background-color:#000000;
+  color:#e60000;
+}
