@@ -1,0 +1,35 @@
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(function(position) {
+$("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+  var lat=position.coords.latitude; //Set lattitude to variable lat
+  var lon=position.coords.longitude;//Set longitude to variable lon
+  var apiKey="a5306efb700454ce0a4a1ec126e8eb6f";//api key 
+  $("#bsApi").html(lat); //check if it works
+  $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+apiKey,function(data){//JSON call
+    var tempInKelvin=Math.floor(data.main.temp); //Using the JSON data and getting the temperature
+    var tempInCelsius=Math.floor(tempInKelvin-273.15);//convert temperature to celsius from Kelvin
+    var tempInFahrenheit=Math.floor(tempInCelsius*(9/5)+32); //convert from celsius to fahrenheit
+    //below is to get weather icon
+    var iconId=data.weather[0].icon;
+    var url="http://openweathermap.org/img/w/"+iconId+".png"; $("#weatherIcon").attr('src',"http://openweathermap.org/img/w/"+iconId+".png");
+    
+   
+  // $("#temperature").html(tempInFahrenheit); // temperature from API is given in kelvin
+    // below this are click responses using Jquery
+    $("#weather").html("Weather: "+data.weather[0].main);//Tells us what weather it is
+   
+    $("#location").html(data.name);
+    $("#inKelvin").click(function()                         
+{
+      $("#temperature").html(tempInKelvin+"° K");
+});
+    $("#inCelsius").click(function(){
+    $("#temperature").html(tempInCelsius+"°C");  
+    });
+    $("#inFahrenheit").click(function(){
+  $("#temperature").html(tempInFahrenheit+"°F");
+    });
+    
+});
+});
+} // for the if statement
