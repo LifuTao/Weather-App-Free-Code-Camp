@@ -1,0 +1,17 @@
+<!-- Open in Firefox for it to work, for some reason does not work in Google Chrome -->
+
+<div id="displayBox"><h1 id="title">Free Code Camp Weather App </h1>
+  <h5 id="weather">Current Weather </h5>
+    <h3 id="temperature"></h3><div id="buttonTrio"><button  id="inKelvin">Kelvin</button><button id="inCelsius">Celsius</button><button id="inFahrenheit">Fahrenheit</button>
+  </div>
+    <h6 id="location">Location</h6>
+  <img id="weatherIcon" src="">
+  <h6 style="text-align:right"> Lifu Tao</h6>
+</div>
+  <body background="https://nssdc.gsfc.nasa.gov/planetary/image/earth_day.jpg">
+    
+</body>
+  
+<!--<h5 id="weather">Weather</h5> testing 
+ <h6 id="bsApi">Blue sky Api </h6>
+-->
